@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Hindenburg Disaster</title>
     <style>
-        /* Reset default styles */
         * {
             margin: 0;
             padding: 0;
@@ -18,13 +17,8 @@
             color: #fff;
             overflow-x: hidden;
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            justify-content: space-between;
         }
 
-        /* Landing page styling with background image */
         .landing-page {
             height: 100vh;
             display: flex;
@@ -77,9 +71,8 @@
             color: white;
         }
 
-        /* Scroll sections styling */
         .scroll-section {
-            height: 100vh;
+            height: auto;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -88,6 +81,7 @@
             opacity: 0;
             transform: translateY(50px);
             transition: all 0.5s ease;
+            padding-top: 20px;
         }
 
         .scroll-section.active {
@@ -113,7 +107,6 @@
             transform: translateY(0);
         }
 
-        /* Style for the video */
         .video-container {
             text-align: center;
             margin: 20px 0;
@@ -121,7 +114,7 @@
 
         iframe {
             width: 100%;
-            height: 500px;
+            height: 400px; 
             border: none;
         }
 
@@ -131,7 +124,6 @@
             color: #fff;
         }
 
-        /* Image styling */
         figure {
             margin: 20px 0;
         }
@@ -150,17 +142,6 @@
             margin-top: 10px;
         }
 
-        /* Style for paragraphs */
-        .main-paragraph {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 8px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Fade-in animation */
         .fade-in {
             animation: fadeIn 1.5s ease-in-out;
         }
@@ -174,19 +155,21 @@
             }
         }
 
-        /* Centering the button at the bottom */
         .button-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             position: fixed;
-            bottom: 20px;
-            width: 100%;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 20px;
+        }
+
+        .button-container .button {
+            padding: 10px 20px;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
-    <!-- Landing Page -->
     <div class="landing-page" id="landing-page">
         <div>
             <h1>Discover the Story of the Hindenburg Disaster</h1>
@@ -198,7 +181,6 @@
         <a href="#landing-page" class="fade-in">The Hindenburg Disaster</a>
     </header>
 
-    <!-- Video Section after Landing Page -->
     <div class="video-container" id="section0">
         <iframe src="https://www.youtube.com/embed/CgWHbpMVQ1U?si=XXPVkxW7WQCOG_WW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <p class="video-caption">A little about the Hindenburg crash and the events leading up to it.</p>
@@ -211,7 +193,29 @@
                 <img src="hindenburg_crash.jpg">
                 <figcaption>A picture of the Hindenburg falling to earth when it burst into flames.</figcaption>
             </figure>
-            <p class="main-paragraph">What caused the Hindenburg Crash is still unknown; however, the most widely accepted theory is that static electricity caused leaking hydrogen gas to catch fire, resulting in the airship combusting.  Joanna Walters from The Guardian stated that “a spark of static electricity had most likely ignited leaking hydrogen […] from one of the ship’s rear gas containers” (Walters 2). A spark of static electricity caused a leak to suddenly catch fire. This is the most widely accepted theory because of the weather conditions during the crash. When the Hindenburg crash happened, there were thunderstorms around the area, which was most likely the cause of the static electricity. These thunderstorms caused the ship to be electrified, which eventually resulted in the leaking hydrogen catching fire. What caused the leak is still a mystery, but theories suggest that a broken wire or other hardware cut one of the rear gas chambers, causing hydrogen to start pouring out. The hardware or loose wire was able to easily slice through the weak cotton and latex material that the chamber was made of. Though that is the most widely believed theory, some people believe it was an act of terrorism to stop the Nazi’s. Luftschiffbau Zeppelin was a German company that owned the airship. People believe that a saboteur or a terrorist on the crew purposely blew up the airship in an effort to end the Nazi regime. Even though the factors of the Hindenburg crash are unknown, it was still a devastating tragedy that ended many people’s lives.</p>
+            <p>What caused the Hindenburg Crash is still unknown; however, the most widely accepted theory is that static electricity caused leaking hydrogen gas to catch fire, resulting in the airship combusting.  Joanna Walters from The Guardian stated that “a spark of static electricity had most likely ignited leaking hydrogen […] from one of the ship’s rear gas containers” (Walters 2). A spark of static electricity caused a leak to suddenly catch fire. This is the most widely accepted theory because of the weather conditions during the crash. When the Hindenburg crash happened, there were thunderstorms around the area, which was most likely the cause of the static electricity. These thunderstorms caused the ship to be electrified, which eventually resulted in the leaking hydrogen catching fire. What caused the leak is still a mystery, but theories suggest that a broken wire or other hardware cut one of the rear gas chambers, causing hydrogen to start pouring out. The hardware or loose wire was able to easily slice through the weak cotton and latex material that the chamber was made of. Though that is the most widely believed theory, some people believe it was an act of terrorism to stop the Nazi’s. Luftschiffbau Zeppelin was a German company that owned the airship. People believe that a saboteur or a terrorist on the crew purposely blew up the airship in an effort to end the Nazi regime. Even though the factors of the Hindenburg crash are unknown, it was still a devastating tragedy that ended many people’s lives.</p>
+        </div>
+    </div>
+
+    <div id="section2" class="scroll-section">
+        <div class="container active">
+            <h2>Consequences of the Hindenburg Disaster</h2>
+            <figure>
+                <img src="zeppelin.jpg">
+                <figcaption> An ordinary Zeppelin operated by the US Navy.</figcaption>
+            </figure>
+            <p>The Hindenburg disaster had serious consequences, leading to a huge stop in Zeppelin production and the decline of airship travel. Michael Leidig from the Daily Telegraph stated that “Zeppelin production was halted soon after the tragedy in May 1937 when the mighty Hindenburg—the largest aircraft ever to fly—burst into flames while landing in a storm at Lakenhurst, New Jersey” (Leidig 1). Zepplin travel had severely stopped after the Hindenburg disaster due to fear of another accident. Before the disaster, Zeppelins were seen as a luxurious and innovative mode of transatlantic transportation; however, the Hindenburg disaster destroyed people's confidence in airships, leading to their rapid decline in popularity. One of the most immediate consequences was the stop of using hydrogen as a lifting gas, as its highly flammable nature contributed to the major disaster. Another long-term effect of the disaster was the shift toward airplanes as the common method of long-distance travel, as they were not only faster but were also way safer, leading to commercial aviation becoming the best mode of travel. Additionally, the Hindenburg disaster became one of the first major disasters to be broadcast live, leaving its place in history as one of the biggest and one of the first disasters to be seen by people all over the world. The shocking footage and radio broadcast of the tragedy enhanced public fear, making it difficult for Zeppelin travel to recover. Although some modern airships exist, the age of Zeppelins ended with the Hindenburg disaster, marking a turning point in aviation history and travel as a whole.	</p>
+        </div>
+    </div>
+
+    <div id="section3" class="scroll-section">
+        <div class="container active">
+            <h2>Improvements After the Disaster</h2>
+            <figure>
+                <img src="modern_zeppelin.jpg" alt="Modern Zeppelin NT">
+                <figcaption>Modern Zeppelins that use helium instead of hydrogen are now flying.</figcaption>
+            </figure>
+            <p> Following the Hindenburg disaster, significant changes were made to ensure that such a disaster would never happen again. One of the biggest changes was the replacement of highly flammable hydrogen with nonflammable helium, making modern airships far safer. Corinne LaBalme from The New York Times stated that “The New Technology Zeppelin, or Zeppelin NT, is filled with nonflammable helium instead of hydrogen and can climb to 7,875 feet” (LaBalme 1). New companies that have been trying to revive airship travel have been using helium, which is way safer gas than hydrogen. The use of helium removes the risk of an explosive fire like the one that destroyed the Hindenburg, as helium is chemically different and does not ignite. Additionally, modern airship designs have improved structural materials, using stronger and more heat-resistant fabrics to prevent potential leaks or failures. Safety regulations have also become stricter, making sure that airships undergo difficult testing before passenger use. The introduction of advanced navigation and new propelling systems, such as multiple propellers for better control and maneuverability, has made airships more stable and responsive, reducing the chance of accidents caused by sudden weather changes or pilot errors. Moreover, airship travel today is mostly used for sightseeing rather than long-distance transatlantic travel, limiting the risks associated with high-speed or high-altitude travel. These advancements have allowed airship travel to regain some popularity while making sure that past mistakes are not repeated. Although the Hindenburg disaster marked the end of the original airship era, innovations in technology and safety measures have allowed airships to make a safe and slow return to the skies.</p>
         </div>
     </div>
 
@@ -220,7 +224,6 @@
     </div>
 
     <script>
-        // Function to add active class for animation
         const sections = document.querySelectorAll('.scroll-section');
         const options = {
             threshold: 0.5
