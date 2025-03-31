@@ -71,6 +71,7 @@
             color: white;
         }
 
+        /* Scroll sections styling */
         .scroll-section {
             height: auto;
             display: flex;
@@ -107,6 +108,7 @@
             transform: translateY(0);
         }
 
+        /* Style for the video */
         .video-container {
             text-align: center;
             margin: 20px 0;
@@ -114,7 +116,7 @@
 
         iframe {
             width: 100%;
-            height: 400px; 
+            height: 400px; /* Reduced video height */
             border: none;
         }
 
@@ -124,6 +126,7 @@
             color: #fff;
         }
 
+        /* Image styling */
         figure {
             margin: 20px 0;
         }
@@ -138,10 +141,11 @@
         figcaption {
             font-size: 1rem;
             color: #fff;
-            text-align: center;
+            text-align: left;
             margin-top: 10px;
         }
 
+        /* Paragraph styling */
         .container p {
             font-size: 1.1rem;
             line-height: 1.8;
@@ -150,6 +154,7 @@
             text-align: justify;
         }
 
+        /* Fade-in animation */
         .fade-in {
             animation: fadeIn 1.5s ease-in-out;
         }
@@ -163,34 +168,34 @@
             }
         }
 
-        .button-container {
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-top: 20px;
+        .radio-section {
+            text-align: center;
+            padding: 30px;
+            background-color: #111;
+            margin-top: 30px;
         }
 
-        .button-container .button {
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-        .main-paragraph {
+        .radio-section a {
+            color: #fff;
             font-size: 1.1rem;
-            line-height: 1.8;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 8px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
+            text-decoration: underline;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .radio-caption {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
+    <!-- Landing Page -->
     <div class="landing-page" id="landing-page">
         <div>
             <h1>Discover the Story of the Hindenburg Disaster</h1>
             <a href="#section1" class="button">Learn More</a>
-            <figcaption style="margin-top: 20px; color: #fff;">Photo caption: A colorized photo of the Hindenburg disaster in action.</figcaption>
         </div>
     </div>
 
@@ -198,6 +203,7 @@
         <a href="#landing-page" class="fade-in">The Hindenburg Disaster</a>
     </header>
 
+    <!-- Video Section after Landing Page -->
     <div class="video-container" id="section0">
         <iframe src="https://www.youtube.com/embed/CgWHbpMVQ1U?si=XXPVkxW7WQCOG_WW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <p class="video-caption">A little about the Hindenburg crash and the events leading up to it.</p>
@@ -236,16 +242,14 @@
         </div>
     </div>
 
-    <div class="button-container">
-        <a href="work_cited.html" class="button">View Work Cited</a>
-    </div>
-
-    <div class="button-container" style="margin-top: 20px;">
-        <a href="https://www.history.com/topics/1930s/hindenburg-disaster#audio" class="button" target="_blank">Real Radio Audio from the Hindenburg Crash</a>
-        <figcaption style="text-align: center; color: #fff; margin-top: 10px;">Listen to the real radio broadcast from the Hindenburg crash.</figcaption>
+    <!-- Radio Footage Section -->
+    <div class="radio-section">
+        <p class="radio-caption">Real radio audio from the Hindenburg crash:</p>
+        <a href="https://www.youtube.com/watch?v=Jjv2hWHTSPM" target="_blank">Click here to listen to the radio broadcast.</a>
     </div>
 
     <script>
+        // Function to add active class for animation
         const sections = document.querySelectorAll('.scroll-section');
         const options = {
             threshold: 0.5
