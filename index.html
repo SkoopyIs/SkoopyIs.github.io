@@ -195,6 +195,31 @@
             color: #ccc;
             margin-top: 10px;
         }
+
+        .work-cited-section {
+            padding: 20px;
+            background-color: #111;
+            color: white;
+            text-align: left;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .work-cited-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .work-cited-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .work-cited-section a {
+            color: #aaa;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -244,37 +269,16 @@
                 <img src="modern_zeppeli.jpg" alt="Modern Zeppelin NT">
                 <figcaption>Modern Zeppelins that use helium instead of hydrogen are now flying.</figcaption>
             </figure>
-            <p class="main-paragraph"> Following the Hindenburg disaster, significant changes were made to ensure that such a disaster would never happen again. One of the biggest changes was the replacement of highly flammable hydrogen with nonflammable helium, making modern airships far safer. Corinne LaBalme from The New York Times stated that “The New Technology Zeppelin, or Zeppelin NT, is filled with nonflammable helium instead of hydrogen and can climb to 7,875 feet” (LaBalme 1). New companies that have been trying to revive airship travel have been using helium, which is way safer gas than hydrogen. The use of helium removes the risk of an explosive fire like the one that destroyed the Hindenburg, as helium is chemically different and does not ignite. Additionally, modern airship designs have improved structural materials, using stronger and more heat-resistant fabrics to prevent potential leaks or failures. Safety regulations have also become stricter, making sure that airships undergo difficult testing before passenger use. The introduction of advanced navigation and new propelling systems, such as multiple propellers for better control and maneuverability, has made airships more stable and responsive, reducing the chance of accidents caused by sudden weather changes or pilot errors. Moreover, airship travel today is mostly used for sightseeing rather than long-distance transatlantic travel, limiting the risks associated with high-speed or high-altitude travel. These advancements have allowed airship travel to regain some popularity while making sure that past mistakes are not repeated. Although the Hindenburg disaster marked the end of the original airship era, innovations in technology and safety measures have allowed airships to make a safe and slow return to the skies.</p>
+            <p class="main-paragraph"> Following the Hindenburg disaster, significant changes were made to ensure that such a disaster would never happen again. One of the biggest changes was the replacement of highly flammable hydrogen with nonflammable helium, making modern airships far safer. Corinne LaBalme from The New York Times stated that “The New Technology Zeppelin, or Zeppelin NT, is filled with nonflammable helium instead of hydrogen and can climb to 7,875 feet” (LaBalme 1). New companies that have been trying to revive airship travel have been using helium, which is way safer gas than hydrogen. The use of helium removes the risk of an explosive fire like the one that destroyed the Hindenburg, as helium is chemically different and does not ignite. Additionally, modern airship designs have improved structural materials, using stronger and more heat-resistant fabrics to prevent potential leaks or failures. Safety regulations have also become stricter, making sure that airships undergo difficult testing before passenger use. The introduction of advanced navigation and new propelling systems, such as multiple propellers for better control and maneuverability, has made airships more stable and responsive, reducing the chance of accidents caused by sudden weather changes or pilot errors. Moreover, airship travel today is mostly used for sightseeing rather than long-distance transatlantic travel, limiting the risks associated with high-speed or high-altitude travel. These advancements have allowed airship travel to regain some popularity while making sure that past mistakes are not repeated. Although the Hindenburg disaster left a devastating mark on aviation history, it also paved the way for technological innovations that helped ensure safer airship travel in the future.</p>
         </div>
     </div>
 
-    <div class="radio-section">
-        <p class="radio-caption">Real radio audio from the Hindenburg crash:</p>
-        <a href="https://www.youtube.com/watch?v=Jjv2hWHTSPM" target="_blank">Click here to listen to the radio broadcast.</a>
-    </div>
-    
-    <div style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); margin-top: 30px;">
-        <a href="Work Citedyhhh.docx" download class="button">Work Cited</a>
+    <div id="work-cited" class="work-cited-section">
+        <h2>Works Cited</h2>
+        <p>Leidig, Michael. “Hindenburg Disaster: The Truth Behind the Tragedy.” Daily Telegraph, 2025.</p>
+        <p>LaBalme, Corinne. “Reviving the Airship: The Next Generation.” The New York Times, 2024.</p>
+        <p>Walters, Joanna. “What Really Caused the Hindenburg Disaster?” The Guardian, 2024.</p>
     </div>
 
-
-    <script>
-        const sections = document.querySelectorAll('.scroll-section');
-        const options = {
-            threshold: 0.5
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
 </body>
 </html>
