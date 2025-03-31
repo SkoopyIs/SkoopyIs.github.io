@@ -83,7 +83,6 @@
             color: white;
         }
 
-        /* Scroll sections styling */
         .scroll-section {
             height: auto;
             display: flex;
@@ -120,7 +119,6 @@
             transform: translateY(0);
         }
 
-        /* Style for the video */
         .video-container {
             text-align: center;
             margin: 20px 0;
@@ -128,7 +126,7 @@
 
         iframe {
             width: 100%;
-            height: 400px; /* Reduced video height */
+            height: 400px; 
             border: none;
         }
 
@@ -138,7 +136,6 @@
             color: #fff;
         }
 
-        /* Image styling */
         figure {
             margin: 20px 0;
         }
@@ -157,7 +154,6 @@
             margin-top: 10px;
         }
 
-        /* Paragraph styling */
         .container p {
             font-size: 1.1rem;
             line-height: 1.8;
@@ -166,7 +162,6 @@
             text-align: justify;
         }
 
-        /* Fade-in animation */
         .fade-in {
             animation: fadeIn 1.5s ease-in-out;
         }
@@ -203,20 +198,18 @@
     </style>
 </head>
 <body>
-    <!-- Landing Page -->
     <div class="landing-page" id="landing-page">
         <div>
             <h1>Discover the Story of the Hindenburg Disaster</h1>
             <a href="#section1" class="button">Learn More</a>
         </div>
-        <div class="caption">Hindenburg Disaster - 1937</div>
+        <div class="caption">Picture Caption: A colored photo of the Hindenburg falling to the ground.</div>
     </div>
 
     <header>
         <a href="#landing-page" class="fade-in">The Hindenburg Disaster</a>
     </header>
 
-    <!-- Video Section after Landing Page -->
     <div class="video-container" id="section0">
         <iframe src="https://www.youtube.com/embed/CgWHbpMVQ1U?si=XXPVkxW7WQCOG_WW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <p class="video-caption">A little about the Hindenburg crash and the events leading up to it.</p>
@@ -255,14 +248,16 @@
         </div>
     </div>
 
-    <!-- Radio Footage Section -->
     <div class="radio-section">
         <p class="radio-caption">Real radio audio from the Hindenburg crash:</p>
         <a href="https://www.youtube.com/watch?v=Jjv2hWHTSPM" target="_blank">Click here to listen to the radio broadcast.</a>
     </div>
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="work_cited.html" class="button">Work Cited</a>
+    </div>
+
 
     <script>
-        // Function to add active class for animation
         const sections = document.querySelectorAll('.scroll-section');
         const options = {
             threshold: 0.5
